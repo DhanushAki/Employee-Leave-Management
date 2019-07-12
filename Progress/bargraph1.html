@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head><title>Project statistics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Bar.css">
+<script type="text/javascript">
+
+
+	var s = 0;
+	var x;
+	var c = 1;
+	
+	function addField(){
+		c = c+1;
+		document.getElementById("mytable").innerHTML += '<tr><th>'+c+'</th><td><input type="text" name="proj'+c+'" required></td><td ><textarea name="desp'+c+'" required></textarea></td><td><input type = date id = "'+c+'d" name="Start'+c+'" required/></td><td><input type = date id = "'+c+'f" name="end'+c+'" required/></td><td id="'+c+'q" align="center"></td><td><input type="number" id="'+c+'a" name="prog'+c+'" step=".01" required></td><td id="'+c+'b"></td></tr>';
+		document.getElementById("tab1").innerHTML += '<tr><th> Project'+c+'</th><th><div class="bar1"><div style="background-color: grey	;height:24px;width:0%;text-align: right;" class="g'+c+'" id = "g'+c+'" ></div></div></th></tr>';
+		document.getElementById("count").value= c;
+
+	}
+	
+	function calculate() {
+		s=0;
+		for (x = 1; x <=c; x++) {
+		var p = document.getElementById(x+'a');
+		var d =(p.value)/100*800;					//coversion of percentage to pixel
+		document.getElementById("g"+x).style.width = d+'px';
+		document.getElementById("g"+x).textContent = p.value+'%';
+		var r = 100-p.value;
+		document.getElementById(x+"b").textContent = r+'%';
+		s = (s+d);
+		var oneDay = 24 * 60 * 60 * 1000;
+		var dsh=document.getElementById(x+"d").value;
+    	var x1 = new Date(dsh);
+    	var ash=document.getElementById(x+"f").value;
+    	var y1 = new Date(ash);
+   
+    	var z = Math.abs((y1 - x1) / (oneDay));
+    	document.getElementById(x+"q").textContent = z;
+
+		}
+		s = s/c;
+		m = s*100/800;
+		var o = m.toFixed(2);
+		document.getElementById("g").style.width = s+'px';
+		var n = document.getElementById('g');
+		n.textContent = o+'%';
+		document.getElementById("prog").textContent = o+'%';
+		q = 100-o;
+		document.getElementById("rem").textContent = q+'%';
+		
+		
+	}
+
+	
+
+</script>
+</head>
+
+<body background="img10.jpg">
+	
+	<h1 align="center"> Project Statistics</h1>
+	<br><br>
+
+<div class="container" align="center" >
+	
+	
+
+		<form action="tst.php" method="POST">
+	<table id="tab1" align="center" border="border">
+		<tr>
+			<th width="225"> All project</th>
+			<th width="800"><div class="bar1">
+				<div class="g" id="g"></div>
+			</div></th>
+		</tr>
+		<tr>
+			<th> Project 1</th>
+			<th><div class="bar1">
+				<div class="g1" id = "g1" ></div>
+			 	</div>
+			 </th>
+		</tr>
+		
+
+
+	</table>
+	<br><br>
+	<table id="mytable" align="center" border="border">
+		<tr>
+			<th>Sl.no</th>
+			<th width="150">Project Name</th>
+			<th width="110">Description</th>
+			<th width="100">Start</th>
+			<th width="100">End</th>
+			<th width="100">Days</th>
+			<th width="100">%Progress</th>
+			<th width="115">%Reamaining</th>
+		</tr>
+		
+		<tr>
+			<th>1</th>
+			<td><input type="text" name="proj1" required></td>
+			<td ><textarea name="desp1" required></textarea></td>
+			<td><input type = "date" id ="1d" name="Start1" required /></td>
+			<td><input type = "date" id ="1f" name="end1" required /></td>
+			<td id="1q" align="center" ></td>
+			<td><input type="number" id="1a" name="prog1" step=".01" required></td>
+			<td id="1b"></td>
+		</tr>
+			</table><br><br>
+	<div>
+		<script>
+		alert("Please add the number of Projects before Entering the details.");
+	</script>
+	<table border="border" >
+		<tr>
+			<th colspan="2" height="25" width="300">All Projects</th>
+		</tr>
+		<tr align="center">
+			<td height="25">%Progress</td>
+			<td>%Remaining</td>
+		</tr>
+		<tr align="center">
+			<td id="prog" height="25"> </td>
+			<td id="rem"> </td>
+		</tr>
+	</table><br><br>
+	
+<input class="but" id = "js" type="submit" name="submit" value="Submit details"> &emsp;
+<input class="but" type="button" name="OK" value="Show Statistics" onclick="calculate();"> &emsp;
+<input class="but" type="button" name="Add Project" value="Add Project" onclick="addField();">
+</div>
+<input type='hidden' name='username' id="count" value="1" />
+
+</form>
+
+</div>
+</body>
+</html>

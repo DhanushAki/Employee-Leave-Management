@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Log in </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css\login.css">
+</head>
+
+<body> 
+	<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  	<a class="navbar-brand" href="#">
+    	<img src="img/bluemindz_logo.png" alt="log" style="width:140px;"/>
+  	</a>
+	<ul class="navbar-nav">
+	  	<li class="nav-item"><a class="nav-link active" href="#">Login</a></li>
+	  	<li class="nav-item"><a class="nav-link" href="../Calendar/src/Calendar.php">Calendar</a></li>
+	  	<li class="nav-item"><a class="nav-link" href="../dailywork/dailywork1.html">Work submission</a></li>
+	  	<li class="nav-item"><a class="nav-link" href="../Progress/bargraph1.html">Project Statistics</a></li>
+	</ul>
+	</nav>
+	<div class="container-fluid">	
+		<form action="login.php" method="POST">
+			<div class="row">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4">	
+					<table class="table table-borderless">
+						<thead>
+							<tr>
+								<th> </th>
+							</tr>
+							<tr>
+								<th> </th>
+							</tr>						
+							<tr>
+								<th> </th>
+							</tr>
+							<tr>
+								<th> </th>
+							</tr>
+							<tr>
+								<th> </th>
+							</tr>
+							<tr>
+								<th> </th>
+							</tr>
+							<tr>
+								<th class="t"><i  style="font-size:50px;color: lightblue;"></i><input type="text" name="username" size="35" placeholder="Enter Username"></th>
+							</tr>
+							<tr>
+								<th class="t"><i  style="font-size: 40px;color: lightblue;"></i><input type="password" name="password" size="35" placeholder="Enter Password"></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-2">
+					<table class="table table-borderless">
+						<thead>
+							<tr>
+								<th ><button type="submit" name="submit" class="btn">Login</button></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="col-lg-2">
+					<table class="table table-borderless">
+						<tbody>
+							<tr>
+								<td ><label class="forgotpassword" data-toggle="modal" data-target="#myModal">Forgot Password?</label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</form>
+		<form action="forgotpassword.php" method="POST">
+			<div class="modal fade" id="myModal" role="dialog">
+	    		<div class="modal-dialog">
+	    			<div class="modal-content">
+	        			<div class="modal-header">
+	          				<h4 class="modal-title">Forgot Password?</h4>
+	          				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	          			</div>
+	          			<div class="modal-body">
+	          				<div class="row">
+	          					<div class="col-lg-4">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td><b>Employee ID</b></td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          					<div class="col">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td><input type="text" size="23" placeholder="Employee ID" name="empid"></td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          				</div>
+	          				<div class="row">
+	          					<div class="col-lg-4">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td><b>Secret Question 1</b></td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          					<div class="col">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td>
+		          									<select name="secret1">
+														<option value="Q1">Select Question</option>
+														<option value="vehicle_number">Vehicle Number</option>
+														<option value="pet_name">Your Pet Name</option>
+														<option value="sslc_marks">SSLC Marks</option>
+													</select>
+												</td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          				</div>
+	          				<div class="row">
+	          					<div class="col-lg-4"></div>
+	          					<div class="col">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td><input type="text" size="23" name="question1" id="question1"></td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          				</div>
+	          				<div class="row">
+	          					<div class="col-lg-4">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td><b>Secret Question 2</b></td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          					<div class="col">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td>
+		          									<select name="secret2">
+														<option value="Q1">Select Question</option>
+														<option value="vehicle_number">Vehicle Number</option>
+														<option value="pet_name">Your Pet Name</option>
+														<option value="sslc_marks">SSLC Marks</option>
+													</select>
+												</td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          				</div>
+	          				<div class="row">
+	          					<div class="col-lg-4"></div>
+	          					<div class="col">
+	          						<table class="table table-borderless">
+	          							<tbody>
+	          								<tr>
+	          									<td><input type="text" size="23" name="question2" id="question2"></td>
+	          								</tr>
+	          							</tbody>
+	          						</table>
+	          					</div>
+	          				</div>	
+	          			</div>	
+	          			<div class="modal-footer">
+	          				<button type=submit1 name="submit1" class="btn">Reset</button>
+	          			</div>
+	          		</div>
+	          	</div>
+        	</div>
+        </form>
+	</div>
+</body>

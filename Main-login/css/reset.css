@@ -1,0 +1,53 @@
+body {
+	background-image: url(../img/bgm-image.jpg);
+	background-size: cover;
+}
+
+
+.container .table {
+	background: rgb(0, 0, 0);
+}
+
+.container-fluid .col-lg-2 {
+	
+	background: rgba(0, 255, 255 ,0.2);
+}
+
+.container-fluid .col-lg-3 {
+
+	background: rgba(0, 255, 255 ,0.2);
+}
+
+h2 {
+	color: white;
+}
+
+th {
+	color: white;
+	text-align: center;
+}
+
+td {
+	color: white;
+	text-align: left;
+}
+
+input[type=text], input[type=password] {
+  padding: 15px;
+  border: none;
+  background: #f1f1f1;
+ }
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn {
+  background-color: lightblue;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+

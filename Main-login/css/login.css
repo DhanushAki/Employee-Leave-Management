@@ -1,0 +1,64 @@
+body {
+	background-image: url(../img/bgm-image.jpg);
+	background-size: cover;
+}
+
+li a:hover:not(.active) {
+  	background-color: lightblue;
+}
+
+.container .table {
+	background: rgb(0, 0, 0);
+}
+
+.container-fluid .table .t{
+	background: rgba(0, 255, 255 ,0.2);
+}
+
+th {
+	text-align: left;
+}
+
+td{
+	text-align: left;
+}
+
+.forgotpassword {
+     	color: white;
+	cursor: pointer;
+	padding: 16px 20px;
+}
+
+label:hover {
+	color: red;
+}
+
+i {
+	padding: 15px;
+	border: none;
+}
+
+input[type=text], input[type=password], select {
+  padding: 15px;
+  border: none;
+  background: #f1f1f1;
+ }
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn {
+  background-color: lightblue;
+  padding: 16px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  color: green;
+  opacity: 1;
+}

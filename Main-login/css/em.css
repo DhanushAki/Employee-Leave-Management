@@ -1,0 +1,49 @@
+body {
+	background-image: url(../img/bgm-image.jpg);
+	background-size: cover;
+        background-attachment: fixed;
+}
+
+li a:hover:not(.active) {
+  	background-color: lightblue;
+}
+
+th {
+	color: white;
+	cursor: pointer; 
+	text-align: left;
+}
+
+td {
+color: white;
+  cursor: pointer;
+	text-align: left;
+}
+
+input[type=text], input[type=radio], select, input[type=date], textarea {
+  padding: 10px;
+  border: none;
+  background: #f1f1f1;
+ }
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.container-fluid .tab-content {
+	
+	background: rgba(0, 255, 255 ,0.2);
+}
+
+.btn {
+  background-color: lightblue;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
